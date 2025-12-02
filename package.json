@@ -3,6 +3,10 @@
   "displayName": "RTF Preview",
   "description": "Preview RTF files by converting them to PDF using LibreOffice",
   "publisher": "elong0527",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elong0527/vscode-rtf-viewer.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.80.0"
