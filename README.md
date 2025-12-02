@@ -25,9 +25,3 @@ This extension contributes the following settings:
 
 - The first preview might take a few seconds as LibreOffice starts up.
 - Complex RTF formatting might not be perfectly preserved in the PDF conversion.
-
-## Release Notes
-
-### 0.0.1
-
-- Initial release of RTF Preview.
