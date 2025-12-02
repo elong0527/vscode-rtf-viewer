@@ -2,6 +2,7 @@
   "name": "vs-rtf-preview",
   "displayName": "RTF Preview",
   "description": "Preview RTF files by converting them to PDF using LibreOffice",
+  "publisher": "elong0527",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.80.0"
