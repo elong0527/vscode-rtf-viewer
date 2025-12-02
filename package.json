@@ -1,0 +1,66 @@
+{
+  "name": "vs-rtf-preview",
+  "displayName": "RTF Preview",
+  "description": "Preview RTF files by converting them to PDF using LibreOffice",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:rtf"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rtf-preview.preview",
+        "title": "Preview RTF",
+        "icon": "$(open-preview)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "rtf-preview.preview",
+          "when": "resourceLangId == rtf",
+          "group": "navigation"
+        }
+      ]
+    },
+    "customEditors": [
+      {
+        "viewType": "rtf-preview.editor",
+        "displayName": "RTF Preview",
+        "selector": [
+          {
+            "filenamePattern": "*.rtf"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "configuration": {
+      "title": "RTF Preview",
+      "properties": {
+        "rtfPreview.libreOfficePath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the LibreOffice executable (soffice). If empty, the extension will try to auto-detect it."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}
