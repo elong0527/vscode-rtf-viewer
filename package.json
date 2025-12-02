@@ -1,6 +1,7 @@
 {
   "name": "vs-rtf-preview",
   "displayName": "RTF Preview",
+  "icon": "images/logo.png",
   "description": "Preview RTF files by converting them to PDF using LibreOffice",
   "publisher": "elong0527",
   "repository": {
